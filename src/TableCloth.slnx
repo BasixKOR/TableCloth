@@ -1,0 +1,31 @@
+<Solution>
+  <Configurations>
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path="../LICENSE.txt" />
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="build_setup.cmd" />
+    <File Path="Directory.build.props" />
+    <File Path="License.rtf" />
+    <File Path="PRIVACY.md" />
+    <File Path="README.md" />
+    <File Path="SECURITY.md" />
+  </Folder>
+  <Project Path="Spork/Spork.csproj">
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="TableCloth.Resources/TableCloth.Resources.csproj">
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="TableCloth.Shared/TableCloth.Shared.shproj" />
+  <Project Path="TableCloth/TableCloth.csproj">
+    <BuildDependency Project="Spork/Spork.csproj" />
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+</Solution>

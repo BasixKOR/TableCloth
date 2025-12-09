@@ -69,7 +69,7 @@ jobs:
         Configuration: ${{ matrix.configuration }}
 
     # Publish TableCloth project
-    - name: Publish TableCloth project
+    - name: Publish TableCloth project  
       run: dotnet publish $env:TableCloth_Project_Path -r win-${{ env.Platform }} --self-contained -p:PublishSingleFile=true -p:PublishReadyToRun=true -c:$env:Configuration
       env:
         Configuration: ${{ matrix.configuration }}
